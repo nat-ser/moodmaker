@@ -5,6 +5,20 @@
     <title>NEW MOVIE</title>
   </head>
   <body>
-    <h1> Write about how a movie you saw made you feeeeeeel </h1>
+    <form action = "/movies" method = "post">
+      <h1> Let's talk about a movie you just saw! </h1>
+        Movie name: <input type="text" name = "movie[name]">
+        Director: <input type="text" name = "movie[director]">
+        Some Info: <textarea name = "movie[info]"></textarea>
+
+
+      <h1> Write about how it made you feeeeeeel.... </h1>
+      <label> You mood after? </label>
+        <input type = "text" name = "mood[name]">
+        How strongly did it make you feel this way?: <input type = "integer" name = "movie[effect_rating]" placeholder = "Scale of 1 to 5">
+      </br></br>
+
+      <input type= "submit" value = "create">
+    </form>
   </body>
 </html>

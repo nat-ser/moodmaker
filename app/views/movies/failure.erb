@@ -1,0 +1,8 @@
+<% @errors_movie.each do |k, message| %>
+<%=k.to_s.split("_").join(" ").capitalize%> Error:  <%= message.join%>
+</br></br>
+<% end %>
+<% @errors_mood.each do |k, message| %>
+Mood <%=k.to_s.split("_").join(" ").capitalize%> Error:  <%= message.join%>
+</br></br>
+<% end %>
