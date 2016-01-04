@@ -16,6 +16,8 @@ class MoodController < ApplicationController
     erb :"moods/index"
   end
 
-  # get '/moods/:slug' do
-  # end
+   get '/moods/:slug' do
+     @mood = Mood.find_by_slug(params[:slug])
+     erb :"moods/show"
+   end
 end
