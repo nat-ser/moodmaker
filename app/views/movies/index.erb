@@ -2,11 +2,11 @@
 <ol>
 <%@movies.each do |movie|%>
   <li>
-  <strong>Name: <%=movie.name%></br></strong>
-  Director: <%=movie.director%></br>
-  Info: <%=movie.info%></br>
-  Mood: <%=movie.mood.name%></br>
-  Rating by effect on mood: <%=movie.effect_rating%></br></br></br>
+  <strong><%=movie.name%></strong></br>
+  Director:<%=movie.director%></br>
+  Info:<%=movie.info%></br>
+  Mood:<%=movie.mood.name%></br>
+  Rating by effect on mood:   <%=movie.effect_rating%></br></br></br>
   </li>
 <%end%>
 

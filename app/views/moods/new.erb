@@ -1,0 +1,19 @@
+<h1> Help someone out and suggest movies for your mood of choice</h1>
+<form action="/moods" method = "post">
+
+  What mood are you suggesting?
+  <input type="text" name="mood[name]"></br>
+<h1> Pick a movie that someone else watched</h1>
+  <%Movie.all.each do |movie|%>
+    <input type = "checkbox" name = "mood[movie_ids][]" value = "<%=movie.id%>"><%=movie.name%> </br>
+  <%end%>
+
+  <h1>and/or add your own movie to this mood </h1>
+    Name:<input type = "text" name = "movie[name]"></br>
+    Director:<input type = "text" name = "movie[director]"></br>
+    Info:<textarea name = "movie[info]"></textarea></br>
+    Rate by effect on your mood <input type = "text" name = "movie[effect_rating]" placeholder="scale of 1 to 5"></br>
+  <input type="submit" value = "submit">
+
+</form>
+</br></br>

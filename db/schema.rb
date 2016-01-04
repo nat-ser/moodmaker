@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103020442) do
+ActiveRecord::Schema.define(version: 20160103210542) do
 
   create_table "moods", force: :cascade do |t|
     t.string "name"
-    t.string "viewer"
   end
 
   create_table "movies", force: :cascade do |t|
