@@ -1,3 +1,7 @@
+
+<head> </head>
+</br></br>
+<body>
 <% @errors_movie.each do |k, message| %>
 <%=k.to_s.split("_").join(" ").capitalize%> Error:  <%= message.join%>
 </br></br>
@@ -6,3 +10,4 @@
 Mood <%=k.to_s.split("_").join(" ").capitalize%> Error:  <%= message.join%>
 </br></br>
 <% end %>
+</body>

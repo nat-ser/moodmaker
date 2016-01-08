@@ -14,7 +14,7 @@ class MovieController < ApplicationController
       @errors_mood = @mood.errors.messages
       erb :"movies/failure"
     else
-      erb :"movies/show"
+      redirect '/movies'
     end
   end
 
@@ -41,5 +41,16 @@ class MovieController < ApplicationController
     @mood = Mood.find_or_create_by(params[:mood])
     erb :"movies/show"
   end
+
+  get '/movies/:slug/delete' do
+    @movie = Movie.find_by_slug(params[:slug])
+    erb :"movies/delete"
+ end
+
+  post '/movies/:slug/delete' do
+     @movie = Movie.find_by_slug(params[:slug])
+    @movie.destroy
+    redirect '/movies'
+      end
 
 end

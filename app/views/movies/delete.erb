@@ -1,0 +1,10 @@
+<title>Delete</title>
+
+ <body>
+     <h1><%= @movie.name %></h1>
+
+     <form action="/movies/<%= @movie.slug %>/delete" method="post" accept-charset="utf-8">
+        <label for="delete">Delete this record?</label>
+         <input type="submit" name="" value="delete">
+     </form>
+</body>

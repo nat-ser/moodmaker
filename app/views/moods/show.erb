@@ -1,11 +1,13 @@
+<body>
 <h1>These are the movies to feel <em><%=@mood.name%></em> </h1>
 <ul>
   <%@mood.movies.each do |movie|%>
   <li>
   <strong><%=movie.name%> </strong></br>
   Director: <%=movie.director%></br>
-  How effective is it? <%=movie.effect_rating%></br>
-  Info: <%=movie.info%>
+  How good is it? <%=movie.effect_rating%></br>
+  Info: <%=movie.info%></br></br></br>
   </li>
-</ul>
 <%end%>
+</ul>
+</body>

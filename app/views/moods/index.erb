@@ -1,12 +1,12 @@
-<h1>All moods available to you </h1>
+<h1>ALL the moods you can feel  </h1>
 <%@moods.each do |mood|%>
 <h4>If you want to feel <em><%=mood.name%></em>, you should watch:</h4>
 Here are the votes:
-  <ol>
+
     <%mood.movies.each do |movie|%>
-       <strong><li>"<%=movie.name%>" by: <%=movie.director%></strong></br>
-      Rate of effect: <%=movie.effect_rating%></br>
-      Summary: <%=movie.info%></li></br>
+       <li><strong>"<%=movie.name%>" by: <%=movie.director%></strong></br>
+      Rating: <%=movie.effect_rating%></br>
+      Summary: <%=movie.info%></br></li>
     <%end%></br></br></br>
-</ol>
+
 <%end%>
